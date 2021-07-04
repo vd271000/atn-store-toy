@@ -1,0 +1,41 @@
+<title>Update</title>
+<br>
+<h3>
+    <a href="/product" 
+    >
+         </i> Add new product
+    </a>
+    List of products
+</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name of product</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.fullName}}</td>
+            <td>{{this.category}}</td>
+            <td>{{this.amount}}</td>
+            <td>
+                <a href="/product/{{this._id}}">
+<i class="fas fa-edit"></i>
+                </a>
+                </td>
+                <td>
+                <a href="/product/delete/{{this._id}}"
+                    onclick="return confirm('Are you sure you want to delete this product?');">
+<i class="fas fa-trash"></i>
+                </a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+

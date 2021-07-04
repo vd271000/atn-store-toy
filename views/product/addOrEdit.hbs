@@ -1,0 +1,33 @@
+<title>Add and Update</title>
+<br>
+<h3>Add product</h3>
+<form action="/product" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{product._id}}">
+    <div class="form-group">
+  <label for="usr">Name of product</label>
+  <input type="text" class="form-control" name="fullName" value="{{product.fullName}}" placeholder="Enter the name of the product">
+<div class="text-danger">
+            {{product.fullNameError}}
+        </div>
+</div>
+<div class="form-group">
+  <label for="usr">Category</label>
+  <input type="text" class="form-control" name="category" value="{{product.category}}" placeholder="Category of product">
+<div class="text-danger">
+            {{product.categoryError}}
+        </div>
+</div>
+<div class="form-group">
+  <label for="usr">Price</label>
+  <input type="text" class="form-control" name="amount" value="{{product.amount}}" placeholder="Fill in the product price">
+<div class="text-danger">
+            {{product.amountError}}
+        </div>
+</div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i ></i>Add product</button>
+        <a href="/product/list" class="btn btn-info">
+            <i ></i>All products
+        </a>
+    </div>
+</form>
